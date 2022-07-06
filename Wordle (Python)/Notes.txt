@@ -1,0 +1,52 @@
+Centering Strings
+    FAILS:
+        print("{0:^{width}d}".format("Welcome to Wordle Solver!", width=SCREEN_WIDTH))
+
+        Anything with \n before....it's ok if \n is after though
+
+    WORKS:
+        SCREEN_WIDTH = os.get_terminal_size().columns
+        CENTER_STRING = "{:^" + str(SCREEN_WIDTH) + "s}"
+        print (CENTER_STRING.format("Welcome to Wordle Solver!\n"))
+
+        SCREEN_WIDTH = os.get_terminal_size().columns
+        print(("Welcome to Wordle Solver!\n").center(SCREEN_WIDTH))
+
+Escape (.venv): 
+    deactivate
+
+Importing modules:
+    from ___ import ___ as ___
+
+Combinations of multiple lists:
+    //Creates an object/location/pointer thingy
+    for i in range(0, WORD_LENGTH-1):
+            possibleSolutions = itertools.product(possibleLetters[i], possibleLetters[i+1])
+        print(possibleSolutions)
+
+    //Invalid syntax
+    possibleSolutions = list(x) for x in numpy.array(numpy.meshgrid(possibleLetters).T.reshape(-1, len(possibleLetters)))
+
+    //Super slow
+    for word in itertools.product(possibleLetters[0], possibleLetters[1], possibleLetters[2], possibleLetters[3], possibleLetters[4]):
+
+    //Function for one of the iterables.product ones
+    def flatten(B):
+    A = []
+    for i in B:
+        if type(i) == list: 
+            A.extend(i)
+        else:
+            A.append(i)
+    return A
+
+    //Check against dictionary
+    for word in DICTIONARY:
+        word = word.lower()
+        validWord = True
+        for index, letter in enumerate(word):
+            print("Index: " + str(ord(letter)-97))
+            if (possibleLetters[index][ord(letter)-97] != letter):
+                validWord = False
+        if (validWord == True):
+            possibleSolutions.append(word)

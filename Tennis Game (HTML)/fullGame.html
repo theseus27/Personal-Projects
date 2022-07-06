@@ -1,0 +1,30 @@
+<html>
+
+Some text here
+<canvas id = "gameCanvas" width="800" height="600"> </canvas>
+
+<script>
+var canvas, canvasContext;
+
+window.onload = function() {
+  console.log("Hello world!");
+  canvas = document.getElementById('gameCanvas');
+  canvasContext = canvas.getContext('2d');
+  drawEverything();
+}
+
+function drawEverything() {
+  //Objects drawn 'last' will be drawn on top of older objects
+  canvasContext.fillStyle = 'black';
+  canvasContext.fillRect(0, 0, canvas.width, canvas.height);
+  canvasContext.fillStyle = 'red';
+  canvasContext.fillRect(100, 200, 50, 25);
+  canvasContext.fillStyle = 'green';
+  canvasContext.fillRect(230, 230, 10, 10);
+  canvasContext.fillStyle = 'white';
+  canvasContext.fillRect(300, 200, 200, 200);
+}
+
+</script>
+
+</html>
