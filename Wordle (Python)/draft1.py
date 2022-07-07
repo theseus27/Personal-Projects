@@ -12,7 +12,7 @@ except:
     from nltk.corpus import words as dictionary
     
     
-def setWordle():    
+def setWordle():
     start = time.time()
     impossible = ['a', 'd', 'e', 'h', 'r', 's', 't']
     dictionarySet = set()
