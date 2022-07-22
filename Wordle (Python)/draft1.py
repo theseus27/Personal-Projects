@@ -30,7 +30,7 @@ def setWordle():
                 print(word)
 
     end = time.time()
-    print("Runtime: ", end-start)
+    print("Set runtime: ", end-start)
 
 
 def listWordle():
@@ -48,10 +48,19 @@ def listWordle():
                 print(word)
 
     end = time.time()
-    print("Runtime: ", end-start)
+    print(" ListRuntime: ", end-start)
 
 #setWordle()
-#listWordle()
+listWordle()
+
+
+
+
+
+
+
+
+
 
 def nextSetWordle():
     possible = ['b', 'f', 'i', 'j', 'k', 'l', 'm', 'v', 'x', 'z']
@@ -80,4 +89,4 @@ def nextSetWordle():
                     
                     if ((word in dictionarySet) and ('l' in word) and ('i' in word)):
                         print(word)
-nextSetWordle()
+#nextSetWordle()

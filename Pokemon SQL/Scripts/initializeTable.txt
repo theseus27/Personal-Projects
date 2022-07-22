@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS pokemon;
+USE pokemon;
+DROP TABLE IF EXISTS pokedex;
+CREATE TABLE pokedex(
+Name VARCHAR(50),
+PokedexNumber int,
+imgURL VARCHAR(99),
+Type1 VARCHAR(15),
+Type2 VARCHAR(15),
+BaseEXP int,
+BaseHP int,
+BaseAtt int,
+BaseDef int,
+BaseSpAtt int,
+BaseSpDef int,
+BaseSp int);
