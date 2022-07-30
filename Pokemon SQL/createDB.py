@@ -21,6 +21,10 @@ def populate(connection, NUM_POKEMON):
         response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{num}")
         data = json.loads(response.content)
 
+        ########################################################################
+        #Parse Data
+        ########################################################################
+        
         name = str.capitalize(data.get("species").get("name"))
         id = data.get("id")
         #imgURL = data.get("sprites").get("front_default")

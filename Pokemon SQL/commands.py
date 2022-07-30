@@ -1,11 +1,8 @@
 import mysql.connector  # type:ignore
 
-def single(connection, query):
-    connection.reconnect()
-    cursor = connection.cursor()
-    cursor.execute(query)
-    connection.commit()
-    cursor.close()
+def search(connection, query):
+    connection.reconnect();
+    
 
 def multi(connection, query):
     connection.reconnect()
