@@ -1,0 +1,27 @@
+<link href="{{ url_for('static', path='css/style.css') }}" rel="stylesheet">
+
+<div id="header">
+   <h1>All Pokemon</h1>
+</div>
+
+<!---Display Pokemon as Cards---->
+<div class="col-md-4 mb-2">
+   {% for pokemon in all%}
+    <div class="card">
+      <div class="card-body d-flex flex-row justify-content-between align-items-center">
+         <div class="image mb-2">
+              <img src="{{pokemon.imgURL}}" alt="">
+         </div&gt;
+         <div class="details">
+            <a href="/pokemon/{{pokemon.id}}"> <h3>{{pokemon.name}}</h3></a>
+            <div class="footer d-flex flex-r3ow justify-content-between align-items-center" id="type-div">
+               <h4>Types</h4>
+               {% for type in pokemon.types%}
+                  <h6>{{type}}</h6>
+               {% endfor %}       
+           </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div&gt;

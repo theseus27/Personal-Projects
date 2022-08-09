@@ -1,0 +1,6 @@
+Design Pokemon cards
+Design individual Pokemon pages
+Make color table of type:color, and have the types and pokemon names be in that color
+Create tables for types, abilities, pokemon base stats?
+    Should base stats be a seperate table idk haha
+In Pokemon class, have a generation, and that can determine which like description they get

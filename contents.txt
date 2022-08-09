@@ -1,0 +1,4 @@
+Pokemon - Next.js
+Pokemon SQL - Python w/ SQL
+tictactoe - React.js
+Wordle - Python

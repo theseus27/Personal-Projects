@@ -1,0 +1,4 @@
+USE pokemonDB;
+
+DROP TABLE IF EXISTS Moves;
+CREATE TABLE Moves();

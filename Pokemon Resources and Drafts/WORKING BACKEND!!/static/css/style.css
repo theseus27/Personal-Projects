@@ -1,0 +1,35 @@
+body{
+    background-color:rgb(236, 234, 232);
+}
+img {
+   border-radius: 10px;
+   max-height: 200px;
+}
+.image{
+    width: 30%;
+}
+.details{
+    width: 70%;
+    margin: 12px
+}
+.card {
+    border-radius: 20px;
+    max-height: 200px;
+}
+
+.col-md-4 mb-2 {
+    max-height: 200px;
+}
+
+a h3 {
+    color: green;
+    font-weight: 5px;
+}
+
+h4 {
+    color:blue;
+}
+
+label {
+    color: purple
+}

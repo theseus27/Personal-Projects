@@ -1,0 +1,30 @@
+<link href="{{ url_for('static', path='css/style.css') }}" rel="stylesheet">
+
+<!--Form to add Pokemon-->
+<form action="/pokemon/" method="POST" enctype="application/x-www-form-urlencoded">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="">Pokemon Name:</label>
+            <input type="text" class="form-control" id="pokemon-name" name="pokemon-name" />
+        </div>
+        <div class="col-md-6">
+            <label for="">Image URL:</label>
+            <input type="text" class="form-control" name="img-url" />
+        </div>
+        <div class="col-md-6">
+            <label for="">Type:</label>
+            <select name="type" id="" class="form-control">
+                <option value="grass">grass</option>
+                <option value="water">water</option>
+                <option value="fire">fire</option>
+            </select>
+        </div>
+        <div class="col-md-12">
+            <label for="">Description:</label>
+            <textarea name="desc" rows="5" class="form-control"></textarea>
+        </div>
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-info mt-4">Save</button>
+        </div>
+    </div>
+</form>

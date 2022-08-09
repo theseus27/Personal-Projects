@@ -1,0 +1,4 @@
+USE pokemonDB;
+
+DROP TABLE IF EXISTS Abilities;
+CREATE TABLE Abilities();
