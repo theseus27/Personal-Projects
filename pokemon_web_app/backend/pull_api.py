@@ -25,7 +25,7 @@ def pull_pokemon(connection):
         if (len(types) == 1):
             types.append("")
             
-        query = "INSERT INTO pokemon(name, imgURL, type1, type2) VALUES('" + str(name) + "', '" + str(imgURL) + "', '" + str(types[0]) + "', '" + str(types[1]) + "');"
+        query = "INSERT INTO pokemon(id, name, imgURL, type1, type2) VALUES('" + str(num) + "', '" + str(name) + "', '" + str(imgURL) + "', '" + str(types[0]) + "', '" + str(types[1]) + "');"
        
         connection.reconnect()
         cursor = connection.cursor()
@@ -46,7 +46,7 @@ def pull_types(connection):
         data = json.loads(response.content)
         name = data.get("name")
         
-        query = "INSERT INTO types(name) VALUES('" + name + "');"
+        query = "INSERT INTO types(id, name) VALUES('" + str(num) + "', '" + name + "');"
         connection.reconnect()
         cursor = connection.cursor()
         cursor.execute(query)
@@ -75,6 +75,6 @@ def pull_api():
     num_db_types = len(cursor.fetchall())
     cursor.close()
     
-    if (num_db_types < NUM_POKEMON):
+    if (num_db_types < NUM_TYPES):
         pull_types(connection)
     

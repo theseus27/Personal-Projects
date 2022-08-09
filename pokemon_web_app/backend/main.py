@@ -46,14 +46,15 @@ async def get_all_pokemon(request: Request, db: Session = Depends(get_db)):
 @app.get("/pokemon/{id}", response_class=HTMLResponse)
 async def get_one_pokemon(request: Request, id: schema.Pokemon.id, db: Session = Depends(get_db)):
     this_pokemon = db.query(Pokemon).filter(Pokemon.id == id).first()
-    print(this_pokemon)
     return templates.TemplateResponse("one_pokemon.html", {"request": request, "pokemon": this_pokemon})
 
 @app.get("/type", response_class=HTMLResponse)
 async def get_all_types(request: Request, db: Session = Depends(get_db)):
     all_types = db.query(Types).all()
     
-    for type in all_types:
-        print(dir(type))
-    
     return templates.TemplateResponse("all_types.html", {"request": request, "all": all_types})
+
+@app.get("/type/{id}", response_class = HTMLResponse)
+async def get_one_type(request: Request, id: schema.Types.id, db: Session = Depends(get_db)):
+    this_type = db.query(Types).filter(Types.id == id).first()
+    return templates.TemplateResponse("one_type.html", {"request": request, "type": this_type})

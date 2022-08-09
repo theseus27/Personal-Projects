@@ -12,10 +12,10 @@
          <div class="details">
             <a href="/type/{{type.id}}"> <h3>{{type.name}}</h3></a>
             <div class="footer d-flex flex-r3ow justify-content-between align-items-center" id="type-div">
-               <h4>Interactions</h4>
-                {% for index in range(6) %}
-                  <h6>{{type.relations[index]}}</h6>
-               {% endfor %}       
+                <h4>Interactions</h4>
+                {% for key, value in type.relations.items() %}
+                  <h6>{{key}}: {{value}}</h6>
+                {% endfor %}       
            </div>
         </div>
       </div>
