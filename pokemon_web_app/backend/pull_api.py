@@ -56,9 +56,10 @@ def pull_types(connection):
 
 def pull_api():
     connection = mysql.connector.connect(
-    host = "localhost",
-    user = "pokemonappuser",
-    database = "serversiderendering"
+    host = "pokemondb.c1bl7gpkpozr.us-east-1.rds.amazonaws.com",
+    user = "root",
+    password = "Burget136!!",
+    database = "pokemondb"
     )
     
     cursor = connection.cursor()

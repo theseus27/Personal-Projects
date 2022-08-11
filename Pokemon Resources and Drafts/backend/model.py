@@ -6,7 +6,7 @@ from sqlalchemy.ext.hybrid import hybrid_property as hybrid
 import json, requests
 
 class Pokemon(Base):
-    __tablename__ = "pokemon"
+    __tablename__ = "Pokemon"
     id = Column(Integer, primary_key = True, unique = True)
     name = Column(String(50), nullable = False)
     imgURL = Column(String(999))
@@ -20,7 +20,7 @@ class Pokemon(Base):
         return [type for type in type_list if type != ""]
 
 class Types(Base):
-    __tablename__ = "types"
+    __tablename__ = "Types"
     id = Column(Integer, primary_key = True, unique = True)
     name = Column(String(50), nullable = False)
     

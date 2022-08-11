@@ -1,9 +1,8 @@
 #Import database
 from pkgutil import get_data
-from model import Pokemon
-import schema
+from model import Pokemon, Types
+import schema, model
 from database import SessionLocal, engine
-import model
 from pull_api import pull_api
 
 from fastapi import FastAPI #type:ignore #FastAPI class inherits from Starlette 
@@ -40,24 +39,22 @@ async def read_root():
     return {"Home Page"}
 
 @app.get("/pokemon", response_class=HTMLResponse)
-async def find_all_pokemon(request: Request, db: Session = Depends(get_db)):
+async def get_all_pokemon(request: Request, db: Session = Depends(get_db)):
     all_pokemon = db.query(Pokemon).all()
-    return templates.TemplateResponse("all.html", {"request": request, "all": all_pokemon})
+    return templates.TemplateResponse("all_pokemon.html", {"request": request, "all": all_pokemon})
 
 @app.get("/pokemon/{id}", response_class=HTMLResponse)
-def find_pokemon(request: Request, id: schema.Pokemon.id, db: Session = Depends(get_db)):
+async def get_one_pokemon(request: Request, id: schema.Pokemon.id, db: Session = Depends(get_db)):
     this_pokemon = db.query(Pokemon).filter(Pokemon.id == id).first()
-    print(this_pokemon)
     return templates.TemplateResponse("one_pokemon.html", {"request": request, "pokemon": this_pokemon})
 
-@app.get("/add/", response_class=HTMLResponse)
-async def serve_add(request: Request, db: Session = Depends(get_db)):
-    return templates.TemplateResponse("add.html")
+@app.get("/type", response_class=HTMLResponse)
+async def get_all_types(request: Request, db: Session = Depends(get_db)):
+    all_types = db.query(Types).all()
+    
+    return templates.TemplateResponse("all_types.html", {"request": request, "all": all_types})
 
-@app.post("/add/")
-async def create_pokemon(db: Session = Depends(get_db), name: schema.Pokemon.name = Form(...), url: schema.Pokemon.imgURL = Form(...), type: schema.Pokemon.type1 = Form(...)):
-    new_pokemon = Pokemon(name=name, imgURL=url, type1=type)
-    db.add(new_pokemon)
-    db.commit()
-    response = RedirectResponse("/", status_code=303)
-    return response
+@app.get("/type/{id}", response_class = HTMLResponse)
+async def get_one_type(request: Request, id: schema.Types.id, db: Session = Depends(get_db)):
+    this_type = db.query(Types).filter(Types.id == id).first()
+    return templates.TemplateResponse("one_type.html", {"request": request, "type": this_type})
