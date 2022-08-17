@@ -1,0 +1,38 @@
+DROP DATABASE IF EXISTS pokemondb;
+CREATE DATABASE pokemondb;
+USE pokemondb;
+DROP TABLE IF EXISTS pokedex;
+CREATE TABLE Pokedex(
+id INT PRIMARY KEY NOT NULL,
+name VARCHAR() NOT NULL,
+generation INT,
+imgURL VARCHAR(),
+types_data VARCHAR(),
+moves_data VARCHAR(),
+abilities_data VARCHAR(),
+base_stats_data VARCHAR()
+);
+DROP TABLE IF EXISTS Type;
+CREATE TABLE Type(
+id INT PRIMARY KEY NOT NULL,
+name VARCHAR() NUT NULL,
+relations_data VARCHAR(),
+pokemon_data VARCHAR(),
+moves_data VARCHAR(),
+);
+DROP TABLE IF EXISTS Moves;
+CREATE TABLE Moves(
+id INT PRIMARY KEY NOT NULL,
+name VARCHAR() NUT NULL,
+type VARCHAR(),
+power INT,
+pp INT,
+priority INT,
+accuracy INT,
+damage_class VARCHAR(),
+effect_chance INT,
+effect_changes VARCHAR(),
+description VARCHAR(),
+stat_changes VARCHAR(),
+pokemon_data VARCHAR()
+);

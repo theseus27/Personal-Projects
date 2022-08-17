@@ -1,4 +1,0 @@
-INSERT INTO TPJOIN(PokedexNumber, Tp) VALUES(1, "Grass");
-INSERT INTO TPJOIN(PokedexNumber, Tp) VALUES(1, "Poison");
-INSERT INTO ABILITYJOIN(PokedexNumber, Ability) VALUES(1, "Overgrow");
-INSERT INTO ABILITYJOIN(PokedexNumber, Ability) VALUES(1, "Chlorophyll");
