@@ -14,16 +14,16 @@ class Move(Base):
     
     id = Column(Integer, primary_key = True, unique = True)
     name = Column(String(), nullable = False)
+    type = Column(String())
+    power = Column(Integer)
+    pp = Column(Integer)
+    priority = Column(Integer)
     accuracy = Column(Integer)
     damage_class = Column(String())
     effect_chance = Column(Integer)
     effect_changes = Column(String())
     description =  Column(String()) #Takes effect chance as a variable
-    power = Column(Integer)
-    pp = Column(Integer)
-    priority = Column(Integer)
     stat_changes = Column(String())
-    type = Column(String())
     
     pokemon_data = Column(String())
         

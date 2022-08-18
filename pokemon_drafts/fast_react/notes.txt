@@ -1,0 +1,26 @@
+POETRY SETUP
+IN BACKEND:
+    add Dockerfile
+    poetry init (add dependencies uvicorn and fastapi)
+    poetry install
+
+RUN WITH DOCKER
+IN BACKEND:
+    docker build -t backend .
+    docker run -it -p 8002:8002 backend
+
+ADD DB
+IN BACKEND:
+    add docker-compose.yml
+    add postgres.env
+    docker-compose up
+
+
+
+@router.get("/{name}")
+async def get_one_pokemon(name: str):
+    found = [pokemon for pokemon in allPokemon if pokemon["name"] == name.capitalize()]
+    if found:
+        return found
+    else:
+        return "Does not exist"
