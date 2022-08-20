@@ -1,5 +1,5 @@
 # Personal_Projects
- Experimentation and Projects
+ Personal Projects
 
     1. Wordle Solver
-2. 
+    2. Pokemon Team Optimizer
