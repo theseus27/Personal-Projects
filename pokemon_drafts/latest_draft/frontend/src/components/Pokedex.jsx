@@ -11,7 +11,8 @@ export default function Pokedex() {
   const [allPokemon, setPokemon] = useState([])
 
   const fetchPokemon = async () => {
-    const response = await fetch("http://localhost:8000/pokemon");
+    const response = await fetch("http://127.0.0.1:8000/pokemon");
+    console.log(response)
     const allPokemon = await response.json();
     setPokemon(allPokemon.data);
   }
