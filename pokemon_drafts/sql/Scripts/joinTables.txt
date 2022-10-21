@@ -1,7 +1,0 @@
-USE pokemonDB;
-
-DROP TABLE IF EXISTS AbilitySet;
-CREATE TABLE AbilitySet();
-
-DROP TABLE IF EXISTS MoveSet;
-CREATE TABLE MoveSet();
