@@ -1,5 +1,0 @@
-# mytree = ET.parse(f"https://www.sneezefetishforum.com/forum/83-original-fiction/page/{pagenum}")
-# print(mytree)
-# myroot = mytree.getroot()
-# items = myroot.findall("item").findall("link")
-# print(items)
