@@ -1,4 +1,4 @@
-# Personal_Projects
+# Personal Projects
 
 ## 1. FitnessDataAnalysis
 ### Stack: Python
