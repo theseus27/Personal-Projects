@@ -1,0 +1,7 @@
+[submodule "CryptoTracker"]
+	path = CryptoTracker
+	url = https://github.com/mmarat01/CryptoTracker
+
+[submodule "GCode"]
+	path = GCode
+	url = https://github.com/JumboCode/G-Code
