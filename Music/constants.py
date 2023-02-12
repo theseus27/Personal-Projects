@@ -1,0 +1,32 @@
+NUM_NOTES = 12
+NUMERIC = {"C" : 1, "C#" : 2, "Db" : 2, "D" : 3, "D#" : 4, "Eb" : 4, "E" : 5, "E#" : 6, "Fb" : 5, "F" : 6, "F#" : 7, "Gb" : 7, "G" : 8, "G#" : 9, "Ab" : 9, "A" : 10, "A#" : 11, "Bb" : 11, "B" : 12, "B#" : 1, "Cb" : 12}
+
+note_dic1 = {"normal"  : "C", "sharp" : "B#",  "flat" : "none"}
+note_dic2 = {"normal"  : "none", "sharp" : "C#",  "flat" : "Db"}
+note_dic3 = {"normal"  : "D", "sharp" : "none",  "flat" : "none"}
+note_dic4 = {"normal"  : "none", "sharp" : "D#",  "flat" : "Eb"}
+note_dic5 = {"normal"  : "E", "sharp" : "none",  "flat" : "Fb"}
+note_dic6 = {"normal"  : "F", "sharp" : "E#",  "flat" : "none"}
+note_dic7 = {"normal"  : "none", "sharp" : "F#",  "flat" : "Gb"}
+note_dic8 = {"normal"  : "G", "sharp" : "none",  "flat" : "none"}
+note_dic9 = {"normal"  : "none", "sharp" : "G#",  "flat" : "Ab"}
+note_dic10 = {"normal"  : "A", "sharp" : "none",  "flat" : "none"}
+note_dic11 = {"normal"  : "none", "sharp" : "A#",  "flat" : "Bb"}
+note_dic12 = {"normal"  : "B", "sharp" : "none",  "flat" : "Cb"}
+LETTERS = {}
+LETTERS[0] = None
+LETTERS[1] = note_dic1
+LETTERS[2] = note_dic2
+LETTERS[3] = note_dic3
+LETTERS[4] = note_dic4
+LETTERS[5] = note_dic5
+LETTERS[6] = note_dic6
+LETTERS[7] = note_dic7
+LETTERS[8] = note_dic8
+LETTERS[9] = note_dic9
+LETTERS[10] = note_dic10
+LETTERS[11] = note_dic11
+LETTERS[12] = note_dic12
+
+MAJOR_INTERVALS = [1, 3, 5, 6, 8, 10, 12]
+MINOR_INTERVALS = [1, 3, 4, 6, 8, 9, 11]
