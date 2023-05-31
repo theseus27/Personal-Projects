@@ -1,0 +1,15 @@
+{ "pokemon" : {
+    "bulbasaur" : [
+              {
+                "name" : "Bulbasaur",
+                "base_experience" : 64,
+                "id" : 1
+              }
+    ],
+    "charmander" : [
+              {
+                "name" : "Charmander",
+                "id" : 4
+              }
+    ] 
+}}

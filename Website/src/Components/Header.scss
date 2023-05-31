@@ -1,0 +1,12 @@
+@use '../Master.scss';
+
+#left {
+    color: Master.$TEXT_PRIMARY;
+    background-color: red;
+    font-size: 48px;
+}
+
+.pagelink {
+    color: Master.$TEXT_EMPHASIS;
+    background-color: red;
+}

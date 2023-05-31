@@ -1,0 +1,32 @@
+$MAIN: #131630;
+$SECONDARY: #FFFFFF;
+
+$TEXT_PRIMARY: #FFFFFF;
+$TEXT_EMPHASIS: #00FFB2;
+$HYPERLINK: #68DBFF;
+
+$ACCENT1: #2DFFA7;
+$ACCENT2: #CC8BFF;
+$ACCENT3: #FFF173;
+$ACCENT4: #78BEFF;
+
+body {
+    background-color: $MAIN;
+    color: $SECONDARY;
+    // padding-left: 5%;
+    // padding-right: 5%;
+    // display: flex;
+    // align-items: center;
+}
+
+.containerBordersSide {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+// .App-header {
+//   min-height: 100vh;
+//   flex-direction: column;
+//   color: white;
+//   text-align: center;
+// }
