@@ -1,0 +1,31 @@
+def optimize_avg_profit_2_way(am_odds, probs):
+    optimal_bets = []
+    optimal_bonus_idx = 0
+    max_profit = 0
+
+    for i in range(len(am_odds)):
+        amounts = [0 for _ in range(len(am_odds))]
+        amounts[i] = BONUS_VAL
+
+        changable_idxs = [j for j in range(len(am_odds))]
+        changable_idxs.remove(i)
+
+        for j in range(len(TEST_AMOUNTS)):
+            amounts[changable_idxs[0]] = round(TEST_AMOUNTS[j], 2)
+            
+            print(str(i) + ", " + str(j))
+            profs = calc_profs(am_odds, amounts, i)
+            
+            avg_profit = 0
+            for i in range(len(probs)):
+                avg_profit += (probs[i]*profs[i])
+            avg_profit = round(avg_profit, 2)
+            
+            #print("Amounts: " + str(amounts) + "  Profs: " + str(profs) + "  AvgProf: " + str(avg_profit))
+
+            if min(profs) > 0 and avg_profit > max_profit:
+                max_profit = avg_profit
+                optimal_bets = [amounts[x] for x in range(len(amounts))]
+                optimal_bonus_idx = i
+    
+    return optimal_bets, optimal_bonus_idx, max_profit
