@@ -2,5 +2,5 @@ tictactoe/
 WritingAI/env/*
 GCode
 PSY28-Final-Project/
-SportsBetting\Retrosheet.zip/*
-SportsBetting\venv\*
+SportsBetting/Retrosheet.zip
+SportsBetting/venv/
