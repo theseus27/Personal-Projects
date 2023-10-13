@@ -357,18 +357,7 @@ def best_of_both(am_odds, probs, max_prof, even_prof):
 
 # Always write odds best to worst
 def main():
-    odds_list = [[-245, 200], [-102, -118]]
-
-    # -300, 250 => 19           Braves/Pirates Moneyline
-    # -250, 205 => 17.50        Rockies/Brewers Moneyline        
-    # 330, 420, 230, 175 => 14  Giants/LAA Run Lines/Total Runs
-    # -128, 370, [245] => 48     Rangers/A's Race to 5
-    # 148, 225, [184] => 40     Giants/A's Race to 5
-    # -170, 270, [490] => 30    Rangers A's Race to 4
-    # -215, 360, [520] => 33    Braves/Pirates Race to 4
-    # -154, 440, [265] => 47    Braves/Pirates Race to 5
-
-    # Look for the best Race to x runs where the last odds is > 400
+    odds_list = [[-110, 100], [-120, 120]]
 
     for odds in odds_list:
         probs = normalize_probs([american_to_implied(odds[i]) for i in range(len(odds))])
@@ -385,7 +374,7 @@ def main():
         print("\n")
 
 def tester():
-    odds = [-245, 200]
+    odds = [[-125, 105], [-120, 100]]
     probs = normalize_probs([american_to_implied(odds[i]) for i in range(len(odds))])
 
     print("BONUS BET on first, odds are [" + str(odds[0]) + ", " + str(odds[1]) + "]")
@@ -410,5 +399,5 @@ def tester():
 
         print(print_stats(avg_profit, profs, amounts, probs))
 
-#main()
-tester()
+main()
+#tester()
