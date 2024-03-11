@@ -1,0 +1,14 @@
+
+.board {
+  width: 80vmin;
+  min-width: 80vmin;
+  height: 80vmin;
+  min-height: 80vmin;
+  background-color: white;
+  display: inline-grid;
+  margin-left: 10%;
+  margin-right: 10%;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}

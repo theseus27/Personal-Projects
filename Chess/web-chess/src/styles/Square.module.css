@@ -1,0 +1,11 @@
+.whiteSquare {
+  background-color: white;
+  color: black;
+  padding: .1rem;
+}
+
+.blackSquare {
+  background-color: black;
+  color: white;
+  padding: .1rem;
+}

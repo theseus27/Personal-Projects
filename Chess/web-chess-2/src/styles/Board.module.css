@@ -1,0 +1,14 @@
+.board {
+  margin-top: 5vmin;
+  margin-bottom: 10vmin;
+  margin-left: 10vmin;
+  margin-right: 10vmin;
+  height: 80vmin;
+  width: 80vmin;
+  display: grid;
+  grid-template-columns: repeat(8, 10vmin);
+  grid-template-rows: repeat(8, 10vmin);
+  gap: 0px;
+  background-color: black;
+  padding: 0px;
+}

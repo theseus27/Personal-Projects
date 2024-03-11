@@ -7,3 +7,7 @@ Analyzes CSV data from FitIndex and generates charts showing overall high scores
 ## 2. Wordle
 ### Stack: Python
 Takes a wordle problem where you can tell it what inputs you've tried, and it will generate a list of possible words remaining.
+
+## 3. Chess
+npx create-react-app APPNAME
+npm start

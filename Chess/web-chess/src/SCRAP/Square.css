@@ -1,0 +1,14 @@
+.whiteSquare {
+  height: 12.5vb;
+  width: 12.5vb;
+  background-color: white;
+  color: black;
+  display: grid;
+}
+
+.blackSquare {
+  /* height: 12.5vb;
+  width: 12.5vb; */
+  background-color: black;
+  color: white;
+}

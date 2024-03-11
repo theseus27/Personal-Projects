@@ -1,0 +1,22 @@
+$CELL_SIZE: 50;
+
+.board {
+    // margin-top: 10vh;
+    // margin-bottom: 10vh;
+    // margin-left: 10%;
+    // margin-right: 10%;
+    // height: 80%;
+    // width: 80%;
+    display: 'grid';
+    grid-template-columns: repeat(8, $CELL_SIZE);
+    grid-template-rows: repeat(8,  $CELL_SIZE);
+    gap: '1px';
+    background-color: 'black';
+    padding: '1px';
+    color: blue;
+}
+
+.cell {
+    background-color: 'white';
+    border: '1px solid black';
+}
